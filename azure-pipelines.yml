@@ -1,9 +1,0 @@
-sudo: required
-services:
-  - docker
-
-berfore_install:
-  - docker build -t jirutti/docker-react -f Dockerfile.dev .
-
-script:
-  - docker run -e CI=true jirutti/docker-react npm run test
